@@ -1,0 +1,105 @@
+<div class="flex input-icon-space flex-column md:flex-row lg:flex-row xl:flex-row">
+	<div class="bg-white sm:col-12 md:col-6 p-0">
+		<div class="w-full signup-page">
+			<form [formGroup]="signupForm">
+				<div class="flex align-items-center justify-content-center flex-column py-5">
+					<div class="text-left">
+						<h3>Sign up</h3>
+					</div>
+					<div class="relative mb-3">
+						<label for="username" class="block font-medium mb-2 text-sm">Username
+							<span class="text-red-500">*</span></label>
+						<i class="pi pi-user absolute input-icon" [class.t_43]="signupFormSubmitted && lf['username'].errors"></i>
+						<input id="username" type="text" formControlName="username" placeholder="Username" pInputText
+							class="w-17rem md:w-25rem" [class.ng-dirty]="signupFormSubmitted && lf['username'].errors">
+						<div class="mb-2">
+							<small *ngIf="signupFormSubmitted && lf['username'].errors" class="p-error block">Please enter the Full
+								Name.</small>
+						</div>
+					</div>
+					<div class="relative mb-3">
+						<label for="password1" class="block font-medium mb-2 text-sm">Password
+							<span class="text-red-500">*</span></label>
+						<i class="pi pi-lock-open absolute input-icon z-5"
+							[class.t_43]="signupFormSubmitted && lf['password1'].errors"></i>
+						<p-password id="password1" formControlName="password1" [feedback]="false" placeholder="Password"
+							[toggleMask]="true" inputStyleClass="sm:w-25rem"
+							[class.ng-dirty]="signupFormSubmitted && lf['password1'].errors">
+						</p-password>
+						<div class="mb-2">
+							<small *ngIf="signupFormSubmitted && lf['password1'].errors" class="p-error block">Please enter
+								password.</small>
+						</div>
+					</div>
+					<div class="relative mb-3">
+						<label for="password2" class="block font-medium mb-2 text-sm">Confirm
+							Password <span class="text-red-500">*</span></label>
+						<i class="pi pi-lock-open absolute input-icon z-5"
+							[class.t_43]="signupFormSubmitted && lf['password2'].errors"></i>
+						<p-password id="password2" formControlName="password2" [feedback]="false" placeholder="Password"
+							[toggleMask]="true" inputStyleClass="sm:w-25rem"
+							[class.ng-dirty]="signupFormSubmitted && lf['password2'].errors">
+						</p-password>
+						<div class="mb-2">
+							<small *ngIf="signupFormSubmitted && lf['password2'].errors" class="p-error block">Please enter
+								password.</small>
+						</div>
+					</div>
+					<div class="relative mb-3">
+						<label for="mobile" class="block font-medium mb-2 text-sm">Mobile No <span
+								class="text-red-500">*</span></label>
+						<i class="pi pi-phone absolute input-icon" [class.t_43]="signupFormSubmitted && lf['mobile'].errors"></i>
+						<input id="mobile" formControlName="mobile" type="text" placeholder="Mobile No" pInputText
+							class="w-17rem md:w-25rem" [class.ng-dirty]="signupFormSubmitted && lf['mobile'].errors">
+						<div class="mb-2">
+							<small *ngIf="signupFormSubmitted && lf['mobile'].errors" class="p-error block">Please enter mobile
+								number.</small>
+						</div>
+					</div>
+					<div class="relative mb-3">
+						<label for="email" class="block font-medium mb-2 text-sm">Email
+							Address <span class="text-red-500">*</span></label>
+						<i class="pi pi-envelope absolute input-icon" [class.t_43]="signupFormSubmitted && lf['email'].errors"></i>
+						<input id="email" formControlName="email" type="text" placeholder="Email Address" pInputText
+							class="w-17rem md:w-25rem" [class.ng-dirty]="signupFormSubmitted && lf['email'].errors">
+						<div *ngIf="signupFormSubmitted && lf['email'].errors">
+							<small *ngIf="lf['email'].errors['required']" class="p-error block">Please enter the email ID.</small>
+							<small *ngIf="lf['email'].errors['email']" class="p-error block">Please
+								enter the valid email
+								ID.</small>
+						</div>
+					</div>
+					<div class="relative mb-2">
+						<button pButton pRipple label="Sign Up" 
+						class=" flex p-3 mb-4 mt-3 login-btn w-17rem md:w-25rem"></button>
+					</div>
+					<div class="flex">
+						<p-divider align="center" class="w-17rem md:w-25rem">
+							<span>Or sign up with</span>
+						</p-divider>
+					</div>
+					<div class="flex align-items-center justify-content-center gap-5 w-17rem md:w-25rem social-icon-wrapper">
+						<img src="assets/layout/images/google.svg" alt="Sakai logo" class="mb-5 flex-shrink-0">
+						<img src="assets/layout/images/Facebook.svg" alt="Sakai logo" class="mb-5 flex-shrink-0">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- <div class="col-6 align-items-center justify-content-center"> -->
+	<div class="bg-white sm:col-12 md:col-6 p-0 bg-white">
+		<div class="flex-column flex-wrap justify-content-between pb-6 pt-6"
+			style="background:url('assets/layout/images/v1015-101a 1.png')100% -10%, linear-gradient(180deg,#02CDB9 0%,#02A8CD 100%);background-repeat: no-repeat;">
+			<div class="text-center">
+				<h3 class="mb-1">HELLO,</h3>
+				<h2 class="text-white mt-0">WELCOME BACK</h2>
+			</div>
+			<div class="text-center">
+				<img src="assets/layout/images/Монтажная область 2@4x 1.png" alt="National Public School" class="max-w-full">
+			</div>
+			<button pButton pRipple type="button"
+				class="p-button-rounded bg-white text-color sign-up-btn border-none pl-5 pr-5 pt-3 pb-3 font-semibold block ml-auto mr-auto mt-0 mb-0"
+				[routerLink]="['/auth/login']">Already have an account ? <span class="text-orange">&nbsp;Login</span></button>
+		</div>
+	</div>
+</div>

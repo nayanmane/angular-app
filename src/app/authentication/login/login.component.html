@@ -1,0 +1,68 @@
+<div class="flex input-icon-space flex-column md:flex-row lg:flex-row xl:flex-row">
+	<div class="bg-white sm:col-12 md:col-6">
+		
+		<div class="flex align-items-center justify-content-center" style="flex-direction: column">
+			<form [formGroup]="loginForm">
+				<div class="relative mb-5">
+					<label for="email1" class="block font-medium mb-2 text-sm">Email Id</label>
+					<i class="pi pi-user absolute input-icon login-input-icon"
+						[class.login-error-icon]="loginFormSubmitted && lf['email'].errors"></i>
+					<input id="email1" formControlName="email" type="text" placeholder="Email address" pInputText
+						class="w-full md:w-25rem mb-2" [class.ng-dirty]="loginFormSubmitted && lf['email'].errors">
+					<div *ngIf="loginFormSubmitted && lf['email'].errors">
+						<small *ngIf="lf['email'].errors['required']" class="p-error block">Please enter the email ID.</small>
+						<small *ngIf="lf['email'].errors['email']" class="p-error block">Please enter the valid email
+							ID.</small>
+					</div>
+				</div>
+				<div class="relative mb-5">
+					<label for="password1" class="block font-medium mb-2 text-sm">Password</label>
+					<i class="pi pi-lock-open absolute input-icon z-5 login-input-icon"
+						[class.login-error-icon]="loginFormSubmitted && lf['password'].errors"></i>
+					<p-password id="password1" [feedback]="false" formControlName="password" [(ngModel)]="password"
+						placeholder="Password" [toggleMask]="true" [class.ng-dirty]="loginFormSubmitted && lf['password'].errors"
+						styleClass="mb-2" inputStyleClass="w-full md:w-25rem">
+					</p-password>
+					<div *ngIf="loginFormSubmitted && lf['password'].errors">
+						<small *ngIf="lf['password'].errors['required']" class="p-error block">Please enter the password.</small>
+					</div>
+				</div>
+				<button pButton pRipple label="Login" 
+					class=" flex w-full p-3 mb-5 login-btn md:w-25rem"></button>
+			</form>
+			<div class="flex align-items-center justify-content-between mb-5 gap-5 md:w-25rem">
+				<div class="flex align-items-center">
+					<p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2">
+					</p-checkbox>
+					<label for="rememberme1">Remember me</label>
+				</div>
+				<a class="font-medium no-underline ml-2 text-right cursor-pointer text-orange"
+					[routerLink]="['/auth/forgotpassword']">Forgot password?</a>
+			</div>
+			<div class="flex">
+				<p-divider align="center" class="md:w-25rem">
+					<span>Or sign in with</span>
+				</p-divider>
+			</div>
+			<!-- <div class="flex align-items-center justify-content-center mb-0 gap-5 md:w-25rem social-icon-wrapper">
+						<img src="assets/layout/images/google.svg" alt="Sakai logo" class="mb-5 flex-shrink-0">
+						<img src="assets/layout/images/Facebook.svg" alt="Sakai logo" class="mb-5 flex-shrink-0">
+					</div> -->
+		</div>
+	</div>
+	<div class=" p-0 bg-white sm:col-12 md:col-6">
+		<div class="flex-column flex-wrap justify-content-between pb-6 pt-6"
+			style="background:url('assets/layout/images/v1015-101a 1.png')100% -10%, linear-gradient(180deg,#02CDB9 0%,#02A8CD 100%);background-repeat: no-repeat;">
+			<div class="text-center">
+				<h3 class="mb-1">HELLO,</h3>
+				<h2 class="text-white mt-0">WELCOME BACK</h2>
+			</div>
+			<div class="text-center">
+			</div>
+			<!-- <button pButton pRipple type="button"
+				class="p-button-rounded bg-white text-color sign-up-btn border-none pl-5 pr-5 pt-3 pb-3 font-semibold block ml-auto mr-auto mt-0 mb-0"
+				[routerLink]="['/auth/signup']">Don't have an account ? <span class="text-orange">&nbsp;Sign
+					up</span></button> -->
+		</div>
+	</div>
+</div>
