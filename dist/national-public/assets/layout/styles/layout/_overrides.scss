@@ -1,0 +1,107 @@
+.p-multiselect:not(.p-disabled):hover {
+  border-color: $themeColor;
+}
+
+.p-inputtext:enabled:hover,
+.p-inputtext:enabled:focus {
+  border-color: $themeColor;
+  box-shadow: 0 0 0 0.2rem $boxShadowInput;
+}
+
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+  color: $textColor1;
+}
+
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+  background: $themeBgColor !important;
+  color: $themeColor !important;
+}
+
+.p-inputtext:enabled:focus,
+.p-dropdown:not(.p-disabled).p-focus,
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+  border-color: $themeColor;
+  box-shadow: 0 0 0 0.2rem $boxShadowInput;
+}
+
+.p-inputtext:enabled:hover,
+.p-dropdown:not(.p-disabled):hover {
+  border-color: $themeColor;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight,
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item.p-highlight {
+  color: $themeColor;
+  background: $themeBgColor;
+}
+
+.p-radiobutton {
+
+  .p-radiobutton-box.p-highlight,
+  .p-radiobutton-box.p-highlight:not(.p-disabled):hover {
+    border-color: $themeColor;
+    background: $themeColor;
+  }
+
+  .p-radiobutton-box:not(.p-disabled).p-focus {
+    box-shadow: 0 0 0 0.2rem $headerColor;
+    border-color: $themeColor;
+  }
+
+  .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: $themeColor;
+  }
+}
+.p-datatable .p-datatable-thead > tr > th {
+  padding: 0.8rem 1rem !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+}
+.p-datatable .p-datatable-tbody>tr>td {
+  padding: 0.4rem 1rem !important;
+  font-size: 0.85rem !important;
+
+  .p-dropdown .p-dropdown-label, .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    font-size: 0.85rem !important;
+  }
+}
+.custom-circle-icon{
+  background: $themeColor;
+  border-radius: 50%;
+  padding: 7px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+}
+.custom-circle-icon:hover{
+  font-weight: bold;
+}
+.cancel-btn{
+  background: #023047;
+  border: 1px solid #023047;
+}
+.cancel-btn:hover{
+  background: #475569 !important;
+  border-color: #475569 !important;
+}
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider, p-inputswitch.p-inputswitch-checked:not(.p-lisabled):hover .p-inputswitch-slider {
+  background: $themeColor !important;
+}
+.layout-menu ul ul {
+  border-radius: 40px 0 0 40px;
+  &:hover {
+    border-radius: 40px 0 0 40px;
+  }
+}
+.tab-content-between.p-tabview .p-tabview-nav{
+  justify-content: unset !important;
+}
+.p-tabview .p-tabview-nav li {
+  margin-right: 16px;
+}
+.p-datatable-wrapper{
+  max-height: calc(100vh - 390px);
+}
+.p-datatable .p-datatable-header {
+  padding: 0.4rem !important;
+}
